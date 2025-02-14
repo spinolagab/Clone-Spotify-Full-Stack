@@ -1,0 +1,62 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* formatando as cores do body */
+body {
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* formatando as cores da ancora buscando por herança do body*/
+/* Se quiser uma outra cor específica pode só colocar o nome da cor */
+a {
+  color: inherit;
+  text-decoration: none; /* remove a decoração das ancoras */
+}
+
+/* Root */
+#root {
+  /* svh pega o tamanho de tela do dispositivo como referencia */
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+/* Ajustar as bordas para ter 10 e 20 px de espaçamento e ajustar como o header aparece na tela */
+.header {
+  padding: 10px 20px;
+  /* display flex é uma maneira de fazer esses ajustes mas também pode ser feito usando grid */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* se fosse um id ao invés de um class name usariamos # ao invés de .*/
+.header__link:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+.main {
+  padding: 20px;
+  margin: 0 10px 10px;
+  background-color: green;
+  border-radius: 15px;
+  flex: 1;
+  background-image: linear-gradient(to bottom, green, black);
+}
+
+.main__texts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__link:hover {
+  text-decoration: underline;
+}
