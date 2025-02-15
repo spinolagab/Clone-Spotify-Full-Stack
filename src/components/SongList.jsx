@@ -1,8 +1,10 @@
 import React from "react";
 import SongItem from "./SongItem";
+import { useState } from "react";
 
 const SongList = ({ songsArray }) => {
-  const initialLimit = 5;
+  // useState[valorAtribuido, funçãoParaAtualizarOEstadoDoValorAtribuido]
+  const [initialLimit, setInitialLimit] = useState(5);
 
   return (
     <div className="song-list">
@@ -12,7 +14,14 @@ const SongList = ({ songsArray }) => {
           <SongItem {...currentSongObj} index={Index} key={Index} />
         ))}
 
-      <p className="song-list__see-more">Ver mais</p>
+      <p
+        className="song-list__see-more"
+        onClick={() => {
+          setInitialLimit(initialLimit + 5);
+        }}
+      >
+        Ver mais
+      </p>
     </div>
   );
 };
