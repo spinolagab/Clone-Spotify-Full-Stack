@@ -1,8 +1,7 @@
 // API == Application Programmnig Interface
 //endpoint == rota que pode ser acessada dentro de uma api
 import express from "express";
-import { artistArray } from "../../front-end/src/assets/database/artists.js";
-import { songsArray } from "../../front-end/src/assets/database/songs.js";
+import { database } from "./connect.js";
 
 const app = express();
 const PORT = 3001;
@@ -11,12 +10,13 @@ app.get("/", (request, response) => {
   response.send("Olá, Mundo!");
 });
 
-app.get("/artists", (request, response) => {
-  response.send(artistArray);
+// Nomear as funcoes como assincronas para trabalhar com o await
+app.get("/artists", async (request, response) => {
+  response.send(await database.collection("artists").find({}).toArray());
 });
 
-app.get("/songs", (request, response) => {
-  response.send(songsArray);
+app.get("/songs", async (request, response) => {
+  response.send(await database.collection("songs").find({}).toArray());
 });
 
 app.listen(PORT, () => {

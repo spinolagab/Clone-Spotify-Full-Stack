@@ -7,9 +7,9 @@ const URI =
 // Instanciar a conexao com o cliente
 const client = new MongoClient(URI);
 
-const database = client.db("spotifyClone");
+export const database = client.db("spotifyClone");
 
-// Encontra tudo que estiver dentro da collection e passa de um objeto MongoDB para um array
-const songCollection = await database.collection("songs").find({}).toArray();
+// // Encontra tudo que estiver dentro da collection e passa de um objeto MongoDB para um array
+// const songCollection = await database.collection("songs").find({}).toArray();
 
-console.log(songCollection);
+// console.log(songCollection);
