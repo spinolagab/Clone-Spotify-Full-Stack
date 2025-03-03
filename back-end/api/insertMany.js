@@ -1,5 +1,5 @@
 // Inserir varios no banco de dados
-import { artistArray } from "../../front-end/src/assets/database/artists.js";
+// import { artistArray } from "../../front-end/src/assets/database/artists.js";
 import { songsArray } from "../../front-end/src/assets/database/songs.js";
 import { database } from "./connect.js";
 

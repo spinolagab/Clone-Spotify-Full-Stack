@@ -77,6 +77,7 @@ const Song = () => {
           duration={duration}
           randomSongFromArtist={randomSongFromArtist}
           randomSongFromArtist2={randomSongFromArtist2}
+          audio = {audio}
         />
 
         <div>
