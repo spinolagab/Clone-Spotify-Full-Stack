@@ -1,5 +1,4 @@
 // usar axios para obter os dados do objeto ao inves do objeto
-import "dotenv/config";
 import axios from "axios";
 
 // const { NODE_ENV } = process.env;
