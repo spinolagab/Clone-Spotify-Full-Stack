@@ -1,7 +1,9 @@
 // usar axios para obter os dados do objeto ao inves do objeto
+import "dotenv/config";
 import axios from "axios";
 
-const URL = "http://localhost:3001";
+const { NODE_ENV } = process.env;
+const URL = NODE_ENV === "development" ? "http://localhost:3001/api" : "/api";
 
 // Requisicoes do back pelo front
 const responseArtists = await axios.get(`${URL}/artists`);
